@@ -1,0 +1,14 @@
+postgres:
+  host: localhost
+  port: 2302
+  database: testdb
+
+spring:
+  datasource:
+    url: jdbc:postgresql://${postgres.host}:${postgres.port}/${postgres.database}
+    username:
+    password:
+    driver-class-name:  org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
